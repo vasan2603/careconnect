@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin panel | CareConnect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Care<span>Connect</span></a>
+    <nav class="site-nav"><a class="active" href="admin.html">Admin</a><a href="doctors.html">Doctors</a><a href="#" data-logout>Sign out</a></nav>
+  </header>
+  <main class="container">
+    <section class="page-heading">
+      <span class="eyebrow">CARECONNECT ADMINISTRATION</span>
+      <h1 class="page-title">Review and manage</h1>
+      <p>Approve qualified doctor applications and review clinic appointments.</p>
+    </section>
+    <section class="section compact-section">
+      <h2>Pending doctor applications</h2>
+      <div id="admin-applications" class="stack-list"><p class="loading">Loading applications…</p></div>
+    </section>
+    <section class="section compact-section">
+      <div class="section-heading">
+        <h2>Clinic appointments</h2>
+        <label>Status<select id="admin-appointment-filter"><option value="">All statuses</option><option value="pending">Pending</option><option value="confirmed">Confirmed</option><option value="cancelled">Cancelled</option><option value="rejected">Rejected</option></select></label>
+      </div>
+      <div id="admin-appointments" class="stack-list"><p class="loading">Loading appointments…</p></div>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/auth.js?v=4"></script>
+  <script src="js/app.js?v=5"></script>
+</body>
+</html>

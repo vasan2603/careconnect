@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Complete profile | CareConnect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Care<span>Connect</span></a>
+    <nav class="site-nav"><a href="doctors.html">Find doctors</a><a href="#" data-logout>Sign out</a></nav>
+  </header>
+  <main class="container narrow">
+    <section class="panel">
+      <span class="eyebrow">ONE LAST STEP</span>
+      <h1 class="page-title">Complete your profile</h1>
+      <p class="muted">Add a few details so we can personalize your CareConnect experience.</p>
+      <form data-onboarding-form class="form-grid">
+        <label>Full name<input name="full_name" autocomplete="name" required minlength="2"></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" minlength="7" maxlength="20" required></label>
+        <label>Date of birth<input name="date_of_birth" type="date" required></label>
+        <label>Gender<select name="gender" required><option value="">Select</option><option>Female</option><option>Male</option><option>Non-binary</option><option>Prefer not to say</option></select></label>
+        <label>City<input name="city" autocomplete="address-level2" required></label>
+        <label>Address<input name="address" autocomplete="street-address" required></label>
+        <label class="full-span">I am here as<select name="role" required><option value="patient">Patient</option><option value="doctor_applicant">Apply as a doctor</option></select></label>
+        <p class="form-message full-span" data-form-message></p>
+        <button class="button full-span" type="submit">Save and continue</button>
+      </form>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
